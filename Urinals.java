@@ -50,7 +50,21 @@ public class Urinals {
             }
         }
     }
-
+    public static boolean goodString( String str )
+    {  // checks to see if valid string
+        boolean good=false;
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)=='0'||str.charAt(i)=='1')
+            {
+                good=true;
+            }
+            else {
+                good=false;
+            }
+        }
+        return good;
+    }
     public static int getUrinals(String in) {
         String s = in;
         if(in != null) {
