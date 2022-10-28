@@ -19,5 +19,13 @@ class UrinalsTest {
         assertEquals(2,u.getUrinals("0000"));
         assertEquals(1,u.getUrinals("01000"));
         assertEquals(-1,u.getUrinals("011"));
+
+    }
+
+    @Test
+    void goodString() {
+        assertEquals(false, Urinals.goodString("abc"));
+        assertEquals(true, Urinals.goodString("10101"));
+        assertEquals(false, Urinals.goodString("1182"));
     }
 }
